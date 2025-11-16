@@ -40,6 +40,11 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid #111; outline-offset: 2
 .sidebar { position: sticky; top: 24px; align-self: start; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; box-shadow: var(--shadow); }
 .brand { display: flex; align-items: center; gap: 12px; font-weight: 800; }
 .brand .logo { width: 32px; height: 32px; border-radius: 8px; background: #000; }
+/* Image logo sizing for header brand */
+.brand-img { height: 32px; width: auto; display: block; }
+/* Hero title row: place logo and product name on one line */
+.hero-title-row { display: flex; align-items: center; gap: 10px; }
+.hero-title-row .brand-img { height: 5em; width: auto; display: inline-block; margin-left: 5px; }
 .snav { margin-top: 12px; display: grid; gap: 8px; }
 .snav a { display: block; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); background: #fff; }
 .snav a:hover { background: #f5f5f5; text-decoration: none; }
@@ -111,8 +116,8 @@ a:focus-visible, .btn:focus-visible { outline: 2px solid #111; outline-offset: 2
 .hero-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr); gap: 20px; align-items: start; }
 @media (max-width: 1024px) { .hero-grid { grid-template-columns: 1fr; } }
 .eyebrow-lg { font-size: 13px; padding: 4px 10px; letter-spacing: .06em; }
-.hero-title { font-size: clamp(32px, 4vw, 44px); line-height: 1.15; margin: 10px 0 8px; }
-.hero-lead { font-size: 16.5px; }
+.hero-title { font-size: clamp(32px, 4vw, 44px); line-height: 1.15; margin-left: 10px; }
+.hero-lead { font-size: 16.5px; margin-left: 10px;}
 @media (min-width: 1280px) { .hero-lead { font-size: 17px; } }
 .chips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; }
 .chips-grid .chip { text-align: center; padding: 8px 10px; }

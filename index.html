@@ -6,6 +6,7 @@
   <title>BK Seller Data Hub</title>
   <link rel="stylesheet" href="./styles.css" />
   <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="./favicon.png" type="image/png" />
   <style>
     /* 单页叙述：去导航，无跳转链接，线性阅读 */
     .header-brand { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.9); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
@@ -15,19 +16,16 @@
   </style>
 </head>
 <body>
-  <header class="header-brand">
-    <div class="container wrap">
-      <div class="brand"><div class="logo" aria-hidden="true"></div><div>深圳星数科技有限公司</div></div>
-    </div>
-  </header>
 
   <main class="container flow">
     <section class="hero card card-lg">
       <div class="hero-grid">
         <div class="hero-left">
-          <h1 class="h1 hero-title">BK Seller Data Hub</h1>
+          <div class="hero-title-row">
+            <div class="brand"><img src="./logo.jpg" alt="深圳星数科技有限公司" class="brand-img" width="300" height="300"></div>
+            <h1 class="h1 hero-title">BK Seller Data Hub</h1>
+          </div>
           <p class="lead hero-lead">将多个亚马逊店铺数据集成到自研系统，实现订单、库存、商品、物流等数据的统一管理和分析；专为多店铺卖家打造，帮您告别多平台切换的低效操作，提升店铺运营效率。</p>
-          
         </div>
         <aside class="hero-right">
           <div class="card hero-aside">
@@ -59,7 +57,7 @@
         <li>物流状态难追踪，异常发现与响应滞后</li>
       </ul>
       <div class="divider"></div>
-      <p class="small prose">这款基于亚马逊 SP-API 开发的应用，为多店铺卖家提供从商品、库存、订单到物流的全链路统一管理与深度分析能力。</p>
+      <p class="small prose">这款基于亚马逊 SP-API 开发的应用，专为多店铺卖家打造，实现商品、库存、订单、物流全链路数据的统一管理与深度分析，帮您告别多平台切换的低效操作，提升店铺运营效率。</p>
     </section>
 
     <section class="section">
@@ -67,44 +65,46 @@
       <div class="grid grid-3">
         <div class="card"><div class="h3">1. 多店铺商品统一管理</div>
           <ul class="list small">
-            <li>支持批量同步多个店铺商品（SKU、ASIN、标题、售价、类目、属性）</li>
-            <li>一键修改同款商品价格、库存预警值，自动同步至对应店铺</li>
+            <li>支持批量同步多个店铺商品（SKU、ASIN、标题、售价、类目、属性等），无需逐店手动维护 
+            </li>
+            <li>一键修改多店铺同款商品的基础信息（如价格、库存预警值），自动同步至对应店铺，减少重复操作 
+            </li>
             <li>实时抓取上架状态、审核进度，异常（下架、属性违规）即时提醒</li>
           </ul>
         </div>
         <div class="card"><div class="h3">2. 智能库存管理</div>
           <ul class="list small">
-            <li>整合各店铺/仓库可用、在途、预留库存，避免信息断层</li>
-            <li>自定义库存预警阈值，低于设定值自动发送提醒（邮件/系统通知）</li>
-            <li>库存周转率分析，识别滞销/热销商品，辅助补货计划</li>
+            <li>整合多店铺库存数据，实时展示各店铺、各仓库的可用库存、在途库存、预留库存，避免信息断层 </li>
+            <li>自定义库存预警阈值，当库存低于设定值时自动发送提醒（支持邮件 / 系统内通知），防止缺货断售</li>
+            <li>提供库存周转率分析，识别滞销 / 热销商品，辅助制定补货计划，降低库存积压成本</li>
           </ul>
         </div>
         <div class="card"><div class="h3">3. 高效订单处理</div>
           <ul class="list small">
-            <li>自动同步待付款、待发货、已发货、已完成、退款中等各状态订单</li>
-            <li>支持批量标记发货、批量导出，联动自研系统自动化处理</li>
-            <li>实时追踪订单状态变更（取消、退款），触发回补库存、退款审核</li>
+            <li>货、已发货、已完成、退款中），统一展示订单详情（买家信息、商品明细、支付金额、税费、配送地址</li>
+            <li>支持批量操作订单（如批量标记发货、批量导出订单数据），对接自研系统实现订单处理自动化，减少人工录入错误</li>
+            <li>实时追踪订单状态变更（如买家取消订单、退款申请），触发对应处理流程（如库存回补、退款审核），提升响应效率</li>
           </ul>
         </div>
         <div class="card"><div class="h3">4. 物流配送数据整合</div>
           <ul class="list small">
-            <li>同步物流方式、物流商、运单号、发货/预计送达/签收状态</li>
-            <li>汇总配送时效、妥投率、异常率，评估不同物流商服务质量</li>
-            <li>针对延迟/丢件等异常订单自动标记提醒，降低差评风险</li>
+            <li>同步多店铺订单的物流信息（配送方式、物流商、运单号、发货时间、预计送达时间、签收状态），无需跳转物流平台查询</li>
+            <li>自动汇总各物流方式的配送时效、妥投率、异常率，分析不同物流商的服务质量，辅助优化物流选择</li>
+            <li>针对物流异常订单（如延迟配送、丢件）自动标记并提醒，助力及时联系买家与物流商解决，降低差评风险</li>
           </ul>
         </div>
         <div class="card"><div class="h3">5. 多维度数据统一分析</div>
           <ul class="list small">
-            <li>综合运营报表：销售排行、库存健康度、履约率、物流成本</li>
-            <li>按店铺与时间（日/周/月/季）筛选，可视化运营趋势</li>
-            <li>支持导出 Excel/CSV，与财务/运营系统形成数据闭环</li>
+            <li>生成多店铺综合运营报表：商品销售排行（按销量 / 销售额）、库存健康度报表、订单履约率报表、物流成本分析报表</li>
+            <li>支持按店铺、时间维度（日 / 周 / 月 / 季度）筛选数据，可视化展示运营趋势（如销量波动、库存变化），辅助决策</li>
+            <li>数据导出功能：支持将分析结果导出为 Excel/CSV 格式，方便与财务、运营系统联动，实现数据闭环</li>
           </ul>
         </div>
         <div class="card"><div class="h3">6. 安全与合规</div>
           <ul class="list small">
-            <li>传输：TLS 1.2+；静态存储：AES-256 加密</li>
-            <li>权限最小化，仅获取商品、库存、订单、物流必要权限</li>
-            <li>多角色权限管控，符合亚马逊数据合规要求</li>
+            <li>数据传输采用 TLS 1.2 + 加密协议，静态数据存储使用 AES-256 加密，严格保护多店铺商品、订单、买家信息安全</li>
+            <li>遵循亚马逊 SP-API 权限最小化原则，仅获取 “商品管理、库存、订单、物流” 相关必要权限，不收集无关数据</li>
+            <li>支持多角色权限管控（如运营员仅可查看 / 操作商品，管理员可配置权限），防止数据误操作或泄露，符合亚马逊数据合规要求</li>
           </ul>
         </div>
       </div>
@@ -113,19 +113,19 @@
     <section class="section card card-lg">
       <h2 class="h2">适用场景</h2>
       <ul class="list small">
-        <li>多店铺运营团队：统一管理商品信息，减少跨平台切换，提高协作效率</li>
-        <li>库存管理人员：实时掌握库存动态，制定补货计划，避免缺货/积压</li>
-        <li>订单处理专员：批量处理订单，快速响应状态变更，缩短履约周期</li>
-        <li>物流运营人员：选择物流方式、追踪状态与异常处理，提升妥投率</li>
-        <li>运营决策者：通过多维度报表掌握各店铺运营情况，优化策略</li>
+        <li>多店铺运营团队：统一管理商品信息，减少跨平台切换操作，提升协作效率</li>
+        <li>库存管理人员：实时掌握多店铺库存动态，精准制定补货计划，避免缺货 / 积压</li>
+        <li>订单处理人员：订单处理人员：批量处理多店铺订单，快速响应订单状态变更，缩短履约周期</li>
+        <li>运营决策者：通过多维度数据报表，清晰掌握各店铺运营情况，优化运营策略</li>
       </ul>
       <div class="divider"></div>
       <h2 class="h2">使用优势</h2>
       <ul class="list small">
-        <li>无额外软件安装：与自研系统适配，通过接口实现数据同步</li>
-        <li>多店铺无缝适配：支持美国、欧洲、日本、加拿大等主流站点</li>
-        <li>数据实时性：商品/库存/订单 ≤ 15 分钟同步；物流实时更新</li>
-        <li>上手简单：界面贴合卖家日常操作习惯，快速熟练使用</li>
+        <li>无额外软件安装：基于自研系统适配，无需下载独立客户端，通过系统接口即可实现数据同步 
+          多店铺无缝适配：支持亚马逊全球主要站点（美国、欧洲、日本、加拿大等）店铺数据整合，无需区分站点重复配置</li>
+        <li>数据实时性保障：商品、库存、订单数据同步间隔≤15 分钟，物流数据实时更新，确保信息时效性</li>
+        <li>操作简单易上手：界面贴合卖家日常操作习惯，无需专业技术背景，运营人员可快速熟练使用 
+          无需复杂部署，绑定多店铺后即可启动数据同步，帮您集中管控多店铺运营核心环节，用数据驱动决策，降低管理成本，提升店铺整体运营效率！</li>
       </ul>
     </section>
 
@@ -158,22 +158,23 @@
     </section>
 
     <section class="section card card-lg">
-      <h2 class="h2">使用限制（客户候选资格）</h2>
+      <h2 class="h2">使用限制（客户候选资格筛选）</h2>
       <div class="grid grid-2">
         <div class="card">
           <div class="h3">店铺与站点</div>
           <ul class="list small">
             <li>仅支持亚马逊专业销售账户（Professional Seller Account）</li>
-            <li>适配美国、加拿大、墨西哥、欧洲、日本等主流站点</li>
-            <li>中东/印度等小众站点需单独适配后使用</li>
+            <li>适配亚马逊全球主流站点（美国、加拿大、墨西哥等）</li>
+            <li>小众站点（如中东站、印度站）需单独适配后使用
+            </li>
           </ul>
         </div>
         <div class="card">
           <div class="h3">规模与权限</div>
           <ul class="list small">
-            <li>建议月 GMV ≥ 1 万美元，或累计 ASIN 数量 ≥ 50</li>
-            <li>使用账号需具备店铺管理员权限，可授权 API 访问与配置</li>
-            <li>须遵守 SP-API 使用政策与各站点数据合规要求</li>
+            <li>建议月 GMV（商品交易总额）≥1 万美元，或累计 ASIN 数量≥50 个的卖家使用（小规模单店铺卖家无需复杂多店管理功能，性价比较低）</li>
+            <li>使用账号需具备亚马逊店铺管理员权限（可授权 API 访问、配置店铺信息），普通运营子账号需主账号分配对应权限后使用</li>
+            <li>需遵守亚马逊 SP-API 使用政策及各站点数据合规要求，禁止用于数据爬取、违规批量操作等不合规场景</li>
           </ul>
         </div>
       </div>
@@ -185,16 +186,17 @@
         <div class="card">
           <div class="h3">浏览器</div>
           <ul class="list small">
-            <li>Chrome ≥ 90、Firefox ≥ 88、Edge ≥ 90、Safari ≥ 14</li>
-            <li>不支持 IE 及版本过低的第三方浏览器</li>
+            <li>Google Chrome（90.0 及以上版本）、Mozilla Firefox（88.0 及以上版本）、Microsoft Edge（90.0 及以上版本）、Safari（14.0 及以上版本）</li>
+            <li>不支持 IE 浏览器及版本过低的第三方浏览器（可能导致数据同步异常、功能无法正常使用）</li>
           </ul>
         </div>
         <div class="card">
           <div class="h3">网络与设备</div>
           <ul class="list small">
-            <li>稳定网络（建议 ≥ 10Mbps），支持 HTTPS</li>
-            <li>Windows 10+/macOS 11+ 电脑设备（暂不支持移动端直接操作）</li>
-            <li>自研系统需支持 RESTful API，对接并具备存储与可视化能力</li>
+            <li>需稳定接入互联网（建议带宽≥10Mbps），支持 HTTPS 协议（确保数据传输安全）</li>
+            <li>Windows 10 及以上、macOS 11 及以上操作系统的电脑设备（暂不支持移动端、平板设备直接操作）</li>
+            <Li>权限配置：卖家需在亚马逊开发者中心完成 SP-API 授权（授予商品、库存、订单、物流相关权限）</Li>
+            <li>自研系统适配：需确保自研系统支持 API 接口对接（兼容 RESTful API 协议），具备数据存储与可视化展示能力</li>
           </ul>
         </div>
       </div>
